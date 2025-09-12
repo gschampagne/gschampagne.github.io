@@ -94,5 +94,42 @@
     <p>© 2025 Grace Champagne</p>
   </footer>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+  // Get elements
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.querySelector(".lightbox .close");
+
+  // Add click listener to all gallery images
+  document.querySelectorAll(".image-gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "block";
+      lightboxImg.src = img.src;
+      captionText.innerHTML = img.alt;
+    });
+  });
+
+  // Close on X click
+  closeBtn.onclick = () => {
+    lightbox.style.display = "none";
+  };
+
+  // Close on outside click
+  lightbox.onclick = (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  };
+  </script>
+
+
 </body>
 </html>
