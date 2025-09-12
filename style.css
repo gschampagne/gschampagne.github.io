@@ -179,3 +179,36 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
+
+.hero-text h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  color: #ff6f91; /* retro pink */
+  text-shadow: 3px 3px #ffd6e0; /* two-tone effect */
+}
+
+body, p, li, .nav-links a, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #222;
+}
+
+/* Logo = retro cursive */
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  color: #ff6f91;
+  text-shadow: 2px 2px #ffd6e0; /* soft pastel shadow */
+}
+
+/* Nav links = sleek minimalist */
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #222;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff6f91;
+}
