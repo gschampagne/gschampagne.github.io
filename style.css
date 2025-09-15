@@ -7,6 +7,7 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #222;
+  background: #ffd6e0; /* soft baby pink */
   line-height: 1.5;
   scroll-behavior: smooth;
 }
@@ -56,7 +57,7 @@ header {
 /* Hero */
 .hero {
   height: 90vh;
-  background: url('images/hero.jpg') center center / cover no-repeat;
+  background: url('images/IMG_2239 copy.JPG') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +99,7 @@ header {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
   display: block;
 }
 
@@ -107,16 +108,16 @@ header {
   /* maybe slightly darker overlay or muted color */
 }
 .plants {
-  background: #faf8f5;  
+  background: transparent;  
 }
 .photography {
-  background: #f5f5f5;
+  background: transparent;
 }
 .science {
-  background: #eef1f6;
+  background:transparent;
 }
 .contact {
-  background: #fff;
+  background: transparent;
   text-align: center;
 }
 
@@ -194,12 +195,14 @@ body, p, li, .nav-links a, h2, h3 {
 }
 
 /* Logo = retro cursive */
-.logo {
+.logo a {
   font-family: 'Pacifico', cursive;
   font-size: 1.8rem;
   color: #ff6f91;
-  text-shadow: 2px 2px #ffd6e0; /* soft pastel shadow */
+  text-shadow: 2px 2px #ffd6e0;
+  text-decoration: none;
 }
+
 
 /* Nav links = sleek minimalist */
 .nav-links a {
