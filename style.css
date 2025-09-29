@@ -91,17 +91,56 @@ header {
 
 /* Image gallery style */
 .image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  column-count: 3;
+  column-gap: 1.5rem;
 }
 .image-gallery img {
   width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 0;
-  display: block;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
 }
+@media (max-width: 768px) {
+  .image-gallery {
+    column-count: 2;
+  }
+}
+@media (max-width: 500px) {
+  .image-gallery {
+    column-count: 1;
+  }
+}
+.image-gallery {
+  position: relative;
+}
+.image-gallery a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.image-gallery img {
+  transition: transform 0.3s ease;
+}
+.image-gallery a:hover img {
+  transform: scale(1.05);
+}
+.image-gallery a::after {
+  content: attr(data-caption);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.image-gallery a:hover::after {
+  opacity: 1;
+}
+
+
 
 /* Plants & Art background tweaks */
 .art .image-gallery {
