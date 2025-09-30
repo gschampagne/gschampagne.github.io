@@ -62,7 +62,7 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 60px; /* adjust if navbar height affects it */
+  margin-top: 70px; /* adjust if navbar height affects it */
 }
 .hero-text {
   text-align: center;
