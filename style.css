@@ -68,7 +68,7 @@ header {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-  margin-bottom: 35vh; /* pushes text up by 15% of viewport height */
+  margin-bottom: 45vh; /* pushes text up by 15% of viewport height */
 }
 .hero-text h1 {
   font-size: 3rem;
