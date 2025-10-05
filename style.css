@@ -57,8 +57,8 @@ header {
 /* Hero */
 .hero {
   height: 90vh;
-  background: url('images/IMG_2368.webp') center center / cover no-repeat;
-  display: flex;
+  background: url('images/hero.JPG') center center / cover no-repeat;
+  display: flex; 
   align-items: center;
   justify-content: center;
   position: relative;
@@ -70,6 +70,7 @@ header {
   text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
   margin-bottom: 45vh; /* pushes text up by 15% of viewport height */
 }
+
 .hero-text h1 {
   font-size: 3rem;
 }
