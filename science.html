@@ -3,36 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grace Champagne — Art</title>
+  <title>Grace Champagne — Science</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Science Page Custom Styling */
+    .science {
+      background: #fafafa;
+      padding: 60px 10%;
+      font-family: 'Montserrat', sans-serif;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .science h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8em;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2d2d2d;
+    }
+
+    .science h3 {
+      font-size: 1.6em;
+      margin-top: 50px;
+      color: #333;
+      border-bottom: 2px solid #ddd;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .text-content p {
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .project-card h4 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .project-card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .awards-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .awards-list li {
+      background: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-left: 4px solid #88c9bf;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .awards-list li strong {
+      color: #222;
+    }
+
+    a {
+      color: #009688;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">GC</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Photography</a></li>
-            <li><a href="art.html" class="active">Art</a></li>
-            <li><a href="plants.html">Plants</a></li>
-            <li><a href="science.html">Science</a></li>
-        </ul>
-    </nav>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">GC</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Photography</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="plants.html">Plants</a></li>
+      <li><a href="science.html" class="active">Science</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section id="science" class="section science">
-    <h2>Science</h2>
-    <div class="text-content">
-        <p>A space to share my research, experiments, observations, and projects.</p>
-        <ul>
-            <li>Project A – summary or link</li>
-            <li>Project B – summary or link</li>
-            <li>Project C – summary or link</li>
-        </ul>
+  <h2>Science</h2>
+
+  <div class="text-content">
+    <p>
+      I am a <strong>Physics student at McGill University</strong> passionate about experimental design, imaging, and detector physics. 
+      My research explores how we can use technology and creativity to make invisible processes measurable — from 
+      <strong>neutrino detection</strong> to <strong>metabolic imaging</strong>.
+    </p>
+
+    <p>
+      In 2025, I was a <strong>DAAD RISE Germany Scholar</strong> at the 
+      <a href="https://www.medizin.uni-kiel.de/en/institutes-departments/core-facilities/molecular-imaging-north-competence-center" target="_blank">University of Kiel</a>,
+      where I worked on <em>deuterium metabolic imaging</em> using a 7T MRI system. Previously, I conducted 
+      <strong>experimental nuclear physics research</strong> in the 
+      <a href="https://neutrino.physics.mcgill.ca" target="_blank">Brunner Neutrino Lab</a>, 
+      contributing to the <em>nEXO collaboration</em> and building custom electronics, DAQ systems, and simulations.
+    </p>
+
+    <h3>Selected Projects</h3>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h4>bSSFP Simulation (University of Kiel)</h4>
+        <p>Simulated balanced steady-state free precession MRI sequences for deuterated metabolites and analyzed 7T data in MATLAB and Paravision.</p>
+      </div>
+      <div class="project-card">
+        <h4>Parahydrogen Bubbler</h4>
+        <p>Designed and tested a parahydrogen generation system, automating bubble flow and optimizing magnetic resonance signal strength.</p>
+      </div>
+      <div class="project-card">
+        <h4>Gadolinium Relaxivity Study</h4>
+        <p>Prepared and analyzed gadolinium samples to determine T₁ and T₂ dependence on concentration at 1T and 7T magnetic fields.</p>
+      </div>
+      <div class="project-card">
+        <h4>Pressure Sensor Box (Brunner Neutrino Lab)</h4>
+        <p>Developed a Raspberry Pi–based gas monitoring system with live GUI visualization and PCB integration for lab safety applications.</p>
+      </div>
+      <div class="project-card">
+        <h4>nEXO Scale Model</h4>
+        <p>3D printed and programmed a 1:100 scale model of the proposed nEXO neutrino detector, integrating LEDs and Python-based event simulation.</p>
+      </div>
+      <div class="project-card">
+        <h4>Stepper Motor Control Software</h4>
+        <p>Developed modular Python code for high-precision actuator control with stepper motors and rotary encoders, enhancing hardware automation.</p>
+      </div>
+      <div class="project-card">
+        <h4>Chroma Stave Scanner</h4>
+        <p>Simulated photon transport to characterize silicon photomultipliers (SiPMs) in cryogenic detector staves using Chroma and Matplotlib.</p>
+      </div>
+      <div class="project-card">
+        <h4>Compton Scattering Experiment</h4>
+        <p>Measured photon scattering spectra to verify Compton’s formula and determine the electron mass using Klein–Nishina analysis.</p>
+      </div>
     </div>
+
+    <h3>Awards & Recognition</h3>
+    <ul class="awards-list">
+      <li><strong>DAAD RISE Germany Scholarship (2025)</strong> — Awarded by the German Academic Exchange Service for research at the University of Kiel.</li>
+      <li><strong>Student Undergraduate Research Award (SURA, 2024)</strong> — Funded to conduct independent research at McGill University.</li>
+      <li><strong>4th Place, CASST Talk Competition (2024)</strong> — Recognized for project presentation on detector instrumentation.</li>
+      <li><strong>Honourable Mention, Trottier Space Institute Summer Talks (2024)</strong> — Awarded for innovative approach to hardware and data acquisition design.</li>
+    </ul>
+
+    <p>
+      <a href="/files/Grace_Champagne_CV.pdf" target="_blank">Download my full CV →</a>
+    </p>
+  </div>
 </section>
 
 <footer>
