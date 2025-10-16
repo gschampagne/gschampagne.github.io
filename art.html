@@ -26,20 +26,56 @@
 <section id="art" class="section art">
   <h2>Art 🎨</h2>
   <div class="image-gallery">
-    <img src="images/sketch1.pdf" alt="aiden">
-    <img src="images/sketch2.pdf" alt="penguin">
-    <img src="images/sketch3.pdf" alt="support system">
-    <img src="images/sketch4.pdf" alt="her">
-    <img src="images/sketch5.pdf" alt="--">
-    <img src="images/sketch6.pdf" alt="moby">
-    <img src="images/sketch7.pdf" alt="flow">
-    <img src="images/sketch8.pdf" alt="sleepy">
+    <img src="images/sketch1.png" alt="aiden">
+    <img src="images/sketch2.png" alt="penguin">
+    <img src="images/sketch3.png" alt="support system">
+    <img src="images/sketch4.png" alt="her">
+    <img src="images/sketch5.png" alt="--">
+    <img src="images/sketch6.png" alt="moby">
+    <img src="images/sketch7.png" alt="flow">
+    <img src="images/sketch8.png" alt="sleepy">
+    <img src="images/sky.png" alt="sky">
+    <img src="images/ocean.png" alt="ocean">
+    <img src="images/forest.png" alt="forest">
+    <img src="images/fall.png" alt="fall">
+    <img src="images/farm.png" alt="sleepy">
   </div>
 </section>
 
 <footer>
   <p>© 2025 Grace Champagne</p>
 </footer>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="caption"></div>
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const captionText = document.getElementById('caption');
+const closeBtn = document.querySelector('.lightbox .close');
+
+document.querySelectorAll('.image-gallery a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    lightbox.style.display = 'block';
+    lightboxImg.src = this.href;
+    captionText.textContent = this.dataset.caption || '';
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) lightbox.style.display = 'none';
+});
+</script>
+
 
 </body>
 </html>
