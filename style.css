@@ -88,6 +88,7 @@ header {
   width: 100%;
   margin-bottom: 1.5rem;
   break-inside: avoid;
+  transition: transform 0.3s ease;
 }
 @media (max-width: 768px) {
   .image-gallery {
@@ -107,40 +108,21 @@ header {
   display: block;
   overflow: hidden;
 }
-.image-gallery img {
-  transition: transform 0.3s ease;
-}
+
 .image-gallery a:hover img {
   transform: scale(1.05);
-}
-.image-gallery a::after {
-  content: attr(data-caption);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.5rem;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.image-gallery a:hover::after {
-  opacity: 1;
 }
 
 /* Sections common */
 .section {
-  background: #fafafa;        /* light gray background for all sections */
-  padding: 100px 10% 60px;    /* extra top padding to move away from header */
+  padding: 80px;    /* extra top padding to move away from header */
   font-family: 'Montserrat', sans-serif;
   color: #222;
   line-height: 1.7;
 }
 
 .section h2 {
-  margin-top: 80px;
+  margin-top: 0px;
   font-family: 'Pacifico', cursive;
   font-size: 2.8em;
   text-align: center;
@@ -231,12 +213,6 @@ footer {
   font-size: 4rem;
   color: #ff6f91; /* retro pink */
   text-shadow: 3px 3px #ffd6e0; /* two-tone effect */
-}
-
-body, p, li, .nav-links a, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  color: #222;
 }
 
 /* Logo = retro cursive */
